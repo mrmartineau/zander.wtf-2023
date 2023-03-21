@@ -1,0 +1,9 @@
+<div class="zm-block zm-music">
+  <h3 class="zm-block-title">Listening</h3>
+  <div class="zm-music-list">
+    {% for item in collections.music.topAlbums %} {% set image =
+    item.image[3]['#text'] %} {% if image %}
+    <img src="{{ image }}" alt="{{ item.name }}" class="zm-music-item" /> {%
+    endif %} {% endfor %}
+  </div>
+</div>

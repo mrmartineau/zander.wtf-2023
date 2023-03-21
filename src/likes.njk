@@ -1,0 +1,40 @@
+---
+title: Blog
+layout: layouts/base.njk
+permalink: /likes
+---
+
+<div class="zm-contentContainer">
+  <header>
+    <div class="mb-6">
+      <h1 class="zm-articleTitle">Likes</h1>
+    </div>
+  </header>
+</div>
+
+  <div>
+    <div class="zm-likes-items flex flex-col gap-2">
+      {% for like in collections.likes %}
+      <div class="zm-likes-item">
+        <a class="zm-likes-item-link" href="{{ like.url | url }}">
+          {{ like.title }}
+        </a>
+        {% if like.description %}
+        <div class="likes-item-description flex gap-3 items-center">
+          {{ like.description }}
+        </div>
+        {% endif %}
+        {% if like.tags.length %}
+        <div class="zm-likes-item-tags flex gap-2 items-center">
+          <div>{{ like.type }}</div>
+          {% for tag in like.tags %}{%if tag != 'zm:link'%}
+          <div>#{{ tag }}</div>
+          {% endif %}{% endfor %}
+        </div>
+        {% endif %}{% endfor %}
+      </div>
+
+    <hr />
+
+    <a href="{{ '/' | url }}">&larr; Back home</a>
+  </div>

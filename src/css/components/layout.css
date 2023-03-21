@@ -1,0 +1,36 @@
+.zm-theFuckingContainer {
+  margin: 0 var(--space-m-l) var(--space-m-l);
+
+  @media screen and (min-width: 800px) {
+    margin-left: 20vw;
+  }
+}
+
+.zm-contentContainer {
+  max-width: 65ch;
+}
+
+/* .verticalName {
+  display: none;
+
+  @media screen and (min-width: 500px) {
+    display: block;
+    position: fixed;
+    top: -1vh;
+    bottom: -1vh;
+    right: 100%;
+    transform: translateX(40%);
+    height: 101vh;
+    height: 101dvh;
+    color: var(--colour-reallyFuckingBright);
+    opacity: 1;
+    z-index: 1;
+  }
+} */
+
+.horizontalName {
+  color: var(--colour-reallyFuckingBright);
+  display: block;
+  /* transform: translateY(-50%); */
+  /* clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%); */
+}

@@ -1,0 +1,8 @@
+<div class="zm-block zm-tv">
+  <h3 class="zm-block-title">Watching</h3>
+  <div class="zm-tv-list">
+    {% for item in collections.tv %}
+    <img src="{{ item.images.medium }}" class="zm-tv-item" />
+    {% endfor %}
+  </div>
+</div>

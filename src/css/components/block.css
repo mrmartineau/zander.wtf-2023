@@ -1,0 +1,16 @@
+.zm-block {
+  --block-radius: 2rem;
+  --block-bg: var(--colour-notQuiteSoFuckingDark);
+  --block-padding: var(--space-m-l);
+  /* --block-colour: var(--colour-reallyFuckingDark);
+  color: var(--block-colour); */
+  border-radius: var(--block-radius);
+  /* border: 1px solid var(--block-bg); */
+  background-color: var(--block-bg);
+  padding: var(--block-padding);
+}
+.zm-block-title {
+  font-variation-settings: 'wght' 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

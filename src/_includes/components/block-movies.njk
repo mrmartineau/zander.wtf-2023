@@ -1,0 +1,20 @@
+<div class="zm-block zm-movies">
+  <h3 class="zm-block-title">Recently watched</h3>
+  <div class="zm-movies-list">
+    {% for item in collections.movies %}
+    <a
+      class="zm-movie-item zm-movie-item--{{ loop.index }}"
+      href="{{ item.uri }}"
+    >
+      <img
+        src="{{ item.film.image.large }}"
+        alt="{{ item.film.title }}"
+        class="zm-movie-image"
+      />
+      <div class="zm-movie-info">
+        <div>{{ item.rating.text }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

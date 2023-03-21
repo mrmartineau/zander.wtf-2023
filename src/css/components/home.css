@@ -1,0 +1,49 @@
+.zm-intro {
+  --avatarSize: min(10vw, 180px);
+  font-variation-settings: 'wght' 900, 'wdth' 75, 'ital' 0;
+  font-size: var(--step-6);
+  line-height: 0.9;
+  color: var(--colour-reallyFuckingBright);
+  margin-bottom: var(--space-l);
+  padding-top: var(--avatarSize);
+
+  span {
+    font-variation-settings: 'wght' 900, 'wdth' 125, 'ital' 0;
+    color: var(--colour-accent);
+    position: relative;
+    white-space: pre;
+
+    &::before,
+    &::after {
+      content: '';
+      background-position: center center;
+      background-size: cover;
+      transform: rotate(7deg);
+      position: absolute;
+      right: 0;
+      bottom: 100%;
+      width: var(--avatarSize);
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      max-width: 180px;
+    }
+
+    &::before {
+      background-image: url(/public/images/avatars/zm-avatar-4.jpg);
+    }
+    &::after {
+      background-image: url(/public/images/avatars/zm-avatar-1.jpg);
+      opacity: 0;
+      transition: all 150ms ease-in-out;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      /* transform: rotate(20deg); */
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    font-size: var(--step-8);
+  }
+}

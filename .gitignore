@@ -1,0 +1,8 @@
+node_modules
+.vscode
+_site
+.cache
+netlify/functions/searcher/**
+!netlify/functions/searcher/index.js
+.env
+cache.vscode/branch-timer.json

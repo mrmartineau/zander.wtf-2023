@@ -1,0 +1,11 @@
+<div class="zm-block zm-blog">
+  <h3 class="zm-block-title">Writing</h3>
+  <div class="zm-blog-items flex flex-col gap-2">
+    {% for item in collections.words | reverse %} {% if loop.index < 7 %}
+    <div class="zm-blog-item">
+      <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+      <div>{{ item.date | readableDate }}</div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>

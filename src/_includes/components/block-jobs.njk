@@ -1,0 +1,19 @@
+<div class="zm-block zm-jobs">
+  <h3 class="zm-block-title">Work</h3>
+  <div class="zm-job-items flex flex-col gap-4">
+    <div class="zm-job-item flex gap-4 items-center">
+      <span>Current</span>
+      <a href="{{ work.jobs.current.url | url }}" class="flex gap-2">
+        {{ work.jobs.current.name }}
+      </a>
+    </div>
+    <div class="flex gap-x-4 gap-y-1 flex-wrap">
+      <span>Previous</span>
+      {% for item in work.jobs.previous %}
+      <a href="{{ item.url | url }}" class="flex gap-2 items-center">
+        {{ item.name }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

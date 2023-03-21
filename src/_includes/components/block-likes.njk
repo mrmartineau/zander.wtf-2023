@@ -1,0 +1,25 @@
+<div class="zm-likes zm-block">
+  <h3 class="zm-block-title">Likes</h3>
+  <div class="zm-likes-items flex flex-col gap-2">
+    {% for like in collections.likes %} {% if loop.index < 5 %}
+    <div class="zm-likes-item">
+      <a class="zm-likes-item-link" href="{{ like.url | url }}">
+        {{ like.title }}
+      </a>
+      <!-- {% if like.description %}
+    <div class="likes-item-description flex gap-3 items-center">
+      {{ like.description }}
+    </div>
+    {% endif %} -->
+      {% if like.tags.length %}
+      <div class="zm-likes-item-tags flex gap-2 items-center">
+        <div>{{ like.type }}</div>
+        {% for tag in like.tags %}{%if tag != 'zm:link'%}
+        <div>#{{ tag }}</div>
+        {% endif %}{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
